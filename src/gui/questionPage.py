@@ -94,7 +94,7 @@ class QuestionPageWindow(tk.Tk):
 
             # Usar canvas para emular un checkbox
             self.canvas[index] = tk.Canvas(self, width=30, height=30)
-            self.canvas[index].place(x=100, y=self.option_indicator_row_start + index * 50)
+            self.canvas[index].place(x=100, y=self.option_indicator_row_start + index * 75)
 
             self.canvas[index].create_oval(
                 5, 5, 25, 25, fill=questions_colors[index])
@@ -105,7 +105,7 @@ class QuestionPageWindow(tk.Tk):
             Lbl_option.config(
                 bg=questions_colors[index], fg="white", font=self.counter_font, padx=20, cursor="hand2")
             Lbl_option.bind("<Button-1>", lambda event, points=point: self.choice(points))
-            Lbl_option.place(x=150, y=self.option_indicator_row_start + index * 50)
+            Lbl_option.place(x=150, y=self.option_indicator_row_start + index * 75)
 
         # Contador de preguntas (wtf thegrefg reference)
         Lbl_questionCounter = tk.Label(
